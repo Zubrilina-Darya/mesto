@@ -1,0 +1,15 @@
+.profile__article-text {
+  margin: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+@media screen and (max-width: 559px) {
+  .profile__article-text {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+  }
+}

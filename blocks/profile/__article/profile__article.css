@@ -1,0 +1,17 @@
+.profile__article {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  column-gap: 18px;
+  row-gap: 16px;
+  max-width: 336px;
+  margin: 0 30px;
+}
+@media screen and (max-width: 559px) {
+  .profile__article {
+    column-gap: 10px;
+    row-gap: 14px;
+    margin: 26px auto 0 auto;
+    max-width: 282px;
+    margin: 0 20px;
+  }
+}

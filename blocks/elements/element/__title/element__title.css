@@ -1,0 +1,9 @@
+.element__title {
+  display: block;
+  background-color: #ffffff;
+  color: #000;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

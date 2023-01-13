@@ -1,0 +1,16 @@
+.pop-up__body {
+  position: relative;
+  margin: auto;
+  width: 430px;
+  height: 330px;
+  background-color: #ffffff;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px 10px 10px 10px;
+}
+@media screen and (max-width: 550px) {
+  .pop-up__body {
+    max-width: calc(100% - 38px);
+    max-height: 322px;
+  }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Место</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+</head>
+
+<body class="root">
+    <div class="page">
+        <header class="header">
+            <img src="./images/logo.svg" alt="Логотип" class="header__logo" />
+        </header>
+        <main>
+            <section class="profile">
+                <div class="profile__info">
+                    <img src="./images/image.svg" alt="Кусто" class="profile__avatar" />
+                    <div class="profile__article">
+                        <h1 class="profile__article-title">Жак-Ив Кусто</h1>
+                        <p class="profile__article-text">Исследователь океана</p>
+                        <button class="profile__article-edit-button" aria-label="редактировать" type="button"></button>
+                    </div>
+                </div>
+                <button class="profile__add-button" aria-label="добавить профиль" type="button"></button>
+            </section>
+            <section class="elements">
+                <article class="element">
+                    <img src="./images/Karachaevsk.jpg" alt="Карачаевск" class="element__image" />
+                    <div class="element__description">
+                        <h2 class="element__title">Карачаевск</h2>
+                        <img src="./images/Vector(Stroke).svg" alt="Лайк" class="element__like" />
+                    </div>
+                </article>
+                <article class="element">
+                    <img src="./images/Albrus.jpg" alt="Гора Элбьрус" class="element__image" />
+                    <div class="element__description">
+                        <h2 class="element__title">Гора Эльбрус</h2>
+                        <img src="./images/Vector(Stroke).svg" alt="Лайк" class="element__like" />
+                    </div>
+                </article>
+                <article class="element">
+                    <img src="./images/Domby.jpg" alt="Домбай" class="element__image" />
+                    <div class="element__description">
+                        <h2 class="element__title">Домбай</h2>
+                        <img src="./images/Vector(Stroke).svg" alt="Лайк" class="element__like" />
+                    </div>
+                </article>
+                <article class="element">
+                    <img src="./images/Albrus.jpg" alt="Гора Элбьрус" class="element__image" />
+                    <div class="element__description">
+                        <h2 class="element__title">Гора Элбьрус</h2>
+                        <img src="./images/Vector(Stroke).svg" alt="Лайк" class="element__like" />
+                    </div>
+                </article>
+                <article class="element">
+                    <img src="./images/Domby.jpg" alt="Домбай" class="element__image" />
+                    <div class="element__description">
+                        <h2 class="element__title">Домбай</h2>
+                        <img src="./images/Vector(Stroke).svg" alt="Лайк" class="element__like" />
+                    </div>
+                </article>
+                <article class="element">
+                    <img src="./images/Karachaevsk.jpg" alt="Карачаевск" class="element__image" />
+                    <div class="element__description">
+                        <h2 class="element__title">Карачаевск</h2>
+                        <img src="./images/Vector(Stroke).svg" alt="Лайк" class="element__like" />
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer class="footer">
+            <img src="./images/Footer.png" alt="Лого" class="footer__logo" />
+        </footer>
+
+        <section class="pop-up">
+            <div class="pop-up__container">
+                <div class="pop-up__body">
+                    <h3 class="pop-up__name">Редактировать профиль</h3>
+                    <form class="pop-up__form">
+                        <input type="text" placeholder="" class="pop-up__input_name pop-up__input" name="name" />
+                        <input type="text" placeholder="" class="pop-up__input_job pop-up__input" name="job" />
+                        <button type="submit" class="pop-up__button-save" value="Отправить">
+                            Сохранить
+                        </button>
+                    </form>
+                    <img src="./images/CloseX.png" alt="Крестик" class="pop-up__close" />
+                </div>
+            </div>
+        </section>
+        <script src="./script/modal.js"></script>
+    </div>
+</body>
+
+</html>
