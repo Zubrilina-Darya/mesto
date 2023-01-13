@@ -10,8 +10,13 @@
   .profile__article {
     column-gap: 10px;
     row-gap: 14px;
-    margin: 26px auto 0 auto;
     max-width: 282px;
     margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 459px) {
+  .profile__article {
+    margin: 26px auto 0 auto;
   }
 }
