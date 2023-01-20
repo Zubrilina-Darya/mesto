@@ -75,22 +75,20 @@
             <img src="./images/Footer.png" alt="Лого" class="footer__logo" />
         </footer>
 
-        <section class="pop-up">
-            <div class="pop-up__container">
-                <div class="pop-up__body">
-                    <h3 class="pop-up__name">Редактировать профиль</h3>
-                    <form class="pop-up__form">
-                        <input type="text" placeholder="" class="pop-up__input_name pop-up__input" name="name" />
-                        <input type="text" placeholder="" class="pop-up__input_job pop-up__input" name="job" />
-                        <button type="submit" class="pop-up__button-save" value="Отправить">
-                            Сохранить
-                        </button>
-                    </form>
-                    <img src="./images/CloseX.png" alt="Крестик" class="pop-up__close" />
-                </div>
+        <section class="popup">
+            <div class="popup__container">
+                <h3 class="popup__name">Редактировать профиль</h3>
+                <form class="popup__form" name="edit-info">
+                    <input type="text" placeholder="" class="popup__input_value_name popup__input" name="name" />
+                    <input type="text" placeholder="" class="popup__input_value_job popup__input" name="job" />
+                    <button type="submit" class="popup__button-save" value="Отправить">
+                        Сохранить
+                    </button>
+                </form>
+                <button type="text" placeholder="" class="popup__close" value="Закрыть"></button>
             </div>
         </section>
-        <script src="./script/modal.js"></script>
+        <script src="./scripts/index.js"></script>
     </div>
 </body>
 
