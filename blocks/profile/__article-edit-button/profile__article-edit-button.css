@@ -1,6 +1,6 @@
 .profile__article-edit-button {
   display: flex;
-  background-image: url(../../../../images/Vector.svg);
+  background-image: url(../../../images/Vector.svg);
   background-repeat: no-repeat;
   background-position: center center;
   height: 24px;
@@ -17,4 +17,10 @@
 
 .profile__article-edit-button:hover {
   opacity: 0.6;
+}
+@media screen and (max-width: 459px) {
+  .profile__article-edit-button {
+    height: 18px;
+    width: 18px;
+  }
 }

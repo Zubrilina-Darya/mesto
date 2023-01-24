@@ -3,4 +3,8 @@
   width: 22px;
   height: 19px;
   cursor: pointer;
+  transition: opacity 0.4s ease-in-out;
+}
+.element__like:hover {
+  opacity: 0.5;
 }
