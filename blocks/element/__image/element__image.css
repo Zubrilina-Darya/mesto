@@ -1,6 +1,11 @@
 .element__image {
   display: block;
   width: 100%;
+  max-width: 282px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  aspect-ratio: auto;
+  height: 282px;
+  cursor: pointer;
+  margin: 0;
 }
