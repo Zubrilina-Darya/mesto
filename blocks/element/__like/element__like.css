@@ -3,12 +3,11 @@
   height: 19px;
   cursor: pointer;
   transition: opacity 0.3s ease-in-out;
-  background-image: url(../../../images/like.svg) ;
+  background-image: url(../../../images/like.svg);
   font-size: 0;
   padding: 0;
   border: none;
   background-color: white;
-
 }
 .element__like:hover {
   opacity: 0.5;
