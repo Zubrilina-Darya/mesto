@@ -10,6 +10,7 @@
   background-position: center center;
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  font-size: 0;
 }
 .popup__close:hover {
   opacity: 0.6;

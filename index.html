@@ -72,10 +72,7 @@
                     </div>
                 </article>
             </section>-->
-            <section class="elements">
-            </section>
-
-
+            <section class="elements"></section>
         </main>
         <footer class="footer">
             <img src="./images/Footer.png" alt="Лого" class="footer__logo" />
@@ -84,7 +81,7 @@
         <section class="popup popup_type_profile">
             <div class="popup__container">
                 <h3 class="popup__name">Редактировать профиль</h3>
-                <form class="popup__form popup__form_type_profile" name="edit-info">
+                <form class="popup__form popup__form_type_profile" name="edit">
                     <input type="text" placeholder="" class="popup__input_value_name popup__input" name="name" />
                     <input type="text" placeholder="" class="popup__input_value_job popup__input" name="job" />
                     <button type="submit" class="popup__button-save" value="Отправить">
@@ -97,13 +94,13 @@
         <section class="popup popup_type_item">
             <div class="popup__container">
                 <h3 class="popup__name">Новое место</h3>
-                <form class="popup__form popup__form_type_item" name="add-info">
+                <form class="popup__form popup__form_type_item" name="add">
                     <input type="text" placeholder="Название" class="popup__input_value_title popup__input"
                         name="name" />
                     <input type="text" placeholder="Ссылка на картинку" class="popup__input_value_link popup__input"
-                        name="job" />
-                    <button type="submit" class="popup__button-save" value="Отправить">
-                        Сохранить
+                        name="link" />
+                    <button type="submit" class="popup__button-save" value="Создать">
+                        Создать
                     </button>
                 </form>
                 <button class="popup__close" value="Закрыть"></button>
@@ -111,23 +108,23 @@
         </section>
     </div>
     <section class="popup popup_type_zoom">
-        <div class="popup__container">
+        <div class="popup__container popup__container_zoom">
             <button class="popup__close" type="button">Закрыть</button>
-            <img class="popup__image" alt="Фото" src="">
-            <h2 class="popup__image-caption">Фото</h2>
+            <img class="popup__image" alt="Фото" src="./images/like.svg" />
+            <h2 class="popup__image-signature">Фото</h2>
         </div>
     </section>
 
     <template id="element-template" class="element-template">
         <article class="element">
             <button type="button" class="element__delete">Удалить</button>
-            <img src="" alt="Фотография" class="element__image">
+            <img src="./images/like.svg" alt="Фотография" class="element__image" />
             <div class="element__description">
                 <h2 class="element__title"></h2>
                 <button type="button" class="element__like"></button>
+            </div>
         </article>
     </template>
-
 
     <script src="./scripts/index.js"></script>
 </body>
