@@ -1,4 +1,6 @@
-const openPopup = document.querySelector(".profile__article-edit-button");
+const buttonOpenPopupProfile = document.querySelector(
+  ".profile__article-edit-button"
+);
 const popup = document.querySelector(".popup");
 const formElement = document.querySelector(".popup__form_type_profile");
 const nameInput = document.querySelector(".popup__input_value_name");
@@ -11,24 +13,24 @@ const addButton = document.querySelector(".profile__add-button");
 const popupProfile = document.querySelector(".popup_type_profile");
 const popupNewPlace = document.querySelector(".popup_type_item");
 const popupZoom = document.querySelector(".popup_type_zoom");
-const closePopupProfileButton = popupProfile.querySelector(".popup__close");
-const closePopupNewPlaceButton = popupNewPlace.querySelector(".popup__close");
-const closePopupZoom = popupZoom.querySelector(".popup__close");
+const buttonClosePopupProfile = popupProfile.querySelector(".popup__close");
+const buttonClosePopupNewPlace = popupNewPlace.querySelector(".popup__close");
+const buttonClosePopupZoom = popupZoom.querySelector(".popup__close");
 
 const inputPlaceName = popupNewPlace.querySelector(".popup__input_value_title");
 const inputPlaceLink = popupNewPlace.querySelector(".popup__input_value_link");
-const popupNewPlaceSaveButton = popupNewPlace.querySelector(
+const buttonSavePopupNewPlace = popupNewPlace.querySelector(
   ".popup__button-save"
 );
 const popupNewPlaceForm = popupNewPlace.querySelector(".popup__form_type_item");
+const img = popupZoom.querySelector(".popup__image");
+const signatureZoom = popupZoom.querySelector(".popup__image-signature");
 
-function ClosePopup(popup) {
+function closePopup(popup) {
   popup.classList.remove("popup_opened");
 }
-function OpenPopup(popup) {
+function openPopup(popup) {
   popup.classList.add("popup_opened");
-  nameInput.value = profileArticle.textContent;
-  jobInput.value = job.textContent;
 }
 
 function handleFormSubmit(evt) {
@@ -36,24 +38,26 @@ function handleFormSubmit(evt) {
   // Получите значение полей jobInput и nameInput из свойства value
   profileArticle.textContent = nameInput.value; // Выберите элементы, куда должны быть вставлены значения полей
   job.textContent = jobInput.value; // Вставьте новые значения с помощью textContent
-  ClosePopup(popup);
+  closePopup(popup);
 }
 formElement.addEventListener("submit", handleFormSubmit);
 
-openPopup.addEventListener("click", () => {
-  OpenPopup(popupProfile);
+buttonOpenPopupProfile.addEventListener("click", () => {
+  openPopup(popupProfile);
+  nameInput.value = profileArticle.textContent;
+  jobInput.value = job.textContent;
 });
-closePopupProfileButton.addEventListener("click", () => {
-  ClosePopup(popupProfile);
+buttonClosePopupProfile.addEventListener("click", () => {
+  closePopup(popupProfile);
 });
 addButton.addEventListener("click", () => {
-  OpenPopup(popupNewPlace);
+  openPopup(popupNewPlace);
 });
-closePopupNewPlaceButton.addEventListener("click", () => {
-  ClosePopup(popupNewPlace);
+buttonClosePopupNewPlace.addEventListener("click", () => {
+  closePopup(popupNewPlace);
 });
-closePopupZoom.addEventListener("click",  () => {
-  ClosePopup(popupZoom);
+buttonClosePopupZoom.addEventListener("click", () => {
+  closePopup(popupZoom);
 });
 
 //Массив
@@ -114,7 +118,7 @@ const createCard = (cardInfo) => {
 };
 
 const renderCard = (cardInfo) => {
-  cardsContainer.append(createCard(cardInfo));
+  cardsContainer.prepend(createCard(cardInfo));
 };
 initialCards.forEach((item) => {
   renderCard(item);
@@ -127,18 +131,18 @@ const handleNewPlace = (evt) => {
   const newPlace = {};
   newPlace.name = inputPlaceName.value;
   newPlace.link = inputPlaceLink.value;
-
+  renderCard(newPlace);
+  closePopup(popupNewPlace);
   inputPlaceName.value = "";
   inputPlaceLink.value = "";
-  renderCard(newPlace);
-  ClosePopup(popupNewPlace);
 };
 popupNewPlaceForm.addEventListener("submit", handleNewPlace);
 
 function handleOpenZoomPopup(imgSrc, text) {
-  popupZoom.classList.add("popup_opened");
-  const img = popupZoom.querySelector(".popup__image");
+  //popupZoom.classList.add("popup_opened");
+  openPopup(popupZoom);
   img.src = imgSrc;
-  const signatureZoom = popupZoom.querySelector(".popup__image-signature");
+  //const signatureZoom = popupZoom.querySelector(".popup__image-signature");
   signatureZoom.textContent = text;
+  img.alt = text;
 }
