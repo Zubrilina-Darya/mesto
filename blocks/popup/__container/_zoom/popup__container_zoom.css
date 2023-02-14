@@ -2,8 +2,7 @@
   background: none;
   min-height: 562px;
   width: auto;
-  display: flex;
-  max-width: 75vw;
+  min-width: max-content;
   justify-content: flex-start;
   flex-direction: column;
 }

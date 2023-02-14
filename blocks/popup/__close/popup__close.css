@@ -5,12 +5,13 @@
   height: 32px;
   width: 32px;
   cursor: pointer;
-  transition: opacity 0.4s ease-in-out;
   background-image: url(../../../images/CloseX.svg);
   background-position: center center;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   font-size: 0;
+  transition: opacity 0.2s linear;
+
 }
 .popup__close:hover {
   opacity: 0.6;
