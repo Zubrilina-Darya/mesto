@@ -140,9 +140,10 @@ popupNewPlaceForm.addEventListener("submit", handleNewPlace);
 
 function handleOpenZoomPopup(imgSrc, text) {
   //popupZoom.classList.add("popup_opened");
-  openPopup(popupZoom);
+
   img.src = imgSrc;
   //const signatureZoom = popupZoom.querySelector(".popup__image-signature");
   signatureZoom.textContent = text;
   img.alt = text;
+  openPopup(popupZoom);
 }
